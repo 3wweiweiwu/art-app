@@ -3,6 +3,15 @@
   "extends": "airbnb",
   "plugins": ["react", "jsx-a11y", "import"],
   "rules": {
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "react/forbid-prop-types": ["off"]
   }
 }
